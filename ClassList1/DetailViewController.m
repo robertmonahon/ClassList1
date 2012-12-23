@@ -8,6 +8,8 @@
 
 #import "DetailViewController.h"
 
+#import "Student.h"
+
 @interface DetailViewController ()
 - (void)configureView;
 @end
@@ -16,6 +18,9 @@
 
 @synthesize detailItem = _detailItem;
 @synthesize detailDescriptionLabel = _detailDescriptionLabel;
+@synthesize studentIdLabel = _studentIdLabel;
+@synthesize firstNameOutlet = _firstNameOutlet;
+@synthesize lastNameOutlet = _lastNameOutlet;
 
 #pragma mark - Managing the detail item
 
@@ -35,6 +40,9 @@
 
     if (self.detailItem) {
         self.detailDescriptionLabel.text = [self.detailItem description];
+        self.studentIdLabel.text = [NSString stringWithFormat:@"%d",[self.detailItem studentId]];
+        self.firstNameOutlet.text = [self.detailItem firstName];
+        self.lastNameOutlet.text = [self.detailItem lastName];
     }
 }
 
@@ -47,6 +55,9 @@
 
 - (void)viewDidUnload
 {
+    [self setStudentIdLabel:nil];
+    [self setFirstNameOutlet:nil];
+    [self setLastNameOutlet:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     self.detailDescriptionLabel = nil;
@@ -57,4 +68,10 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
+- (IBAction)updateAction:(id)sender {
+    Student *tempStudent = self.detailItem;
+    tempStudent.firstName = self.firstNameOutlet.text;
+    tempStudent.lastName = self.lastNameOutlet.text;
+    
+}
 @end

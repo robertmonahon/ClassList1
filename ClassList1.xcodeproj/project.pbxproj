@@ -21,6 +21,7 @@
 		C40628CB1686770D000F982D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C40628A91686770D000F982D /* Foundation.framework */; };
 		C40628D31686770D000F982D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C40628D11686770D000F982D /* InfoPlist.strings */; };
 		C40628D61686770D000F982D /* ClassList1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = C40628D51686770D000F982D /* ClassList1Tests.m */; };
+		C40628E116867AE3000F982D /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = C40628E016867AE3000F982D /* Student.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,23 +39,25 @@
 		C40628A71686770D000F982D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C40628A91686770D000F982D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C40628AB1686770D000F982D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		C40628AF1686770D000F982D /* ClassList1-Info.plist */ = {isa = PBXFileReference; path = "ClassList1-Info.plist"; sourceTree = "<group>"; };
+		C40628AF1686770D000F982D /* ClassList1-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ClassList1-Info.plist"; sourceTree = "<group>"; };
 		C40628B11686770D000F982D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C40628B31686770D000F982D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C40628B51686770D000F982D /* ClassList1-Prefix.pch */ = {isa = PBXFileReference; path = "ClassList1-Prefix.pch"; sourceTree = "<group>"; };
-		C40628B61686770D000F982D /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		C40628B51686770D000F982D /* ClassList1-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ClassList1-Prefix.pch"; sourceTree = "<group>"; };
+		C40628B61686770D000F982D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C40628B71686770D000F982D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C40628BA1686770D000F982D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		C40628BC1686770D000F982D /* MasterViewController.h */ = {isa = PBXFileReference; path = MasterViewController.h; sourceTree = "<group>"; };
+		C40628BC1686770D000F982D /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		C40628BD1686770D000F982D /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		C40628BF1686770D000F982D /* DetailViewController.h */ = {isa = PBXFileReference; path = DetailViewController.h; sourceTree = "<group>"; };
+		C40628BF1686770D000F982D /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		C40628C01686770D000F982D /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		C40628C71686770D000F982D /* ClassList1Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClassList1Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C40628C81686770D000F982D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		C40628D01686770D000F982D /* ClassList1Tests-Info.plist */ = {isa = PBXFileReference; path = "ClassList1Tests-Info.plist"; sourceTree = "<group>"; };
+		C40628D01686770D000F982D /* ClassList1Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ClassList1Tests-Info.plist"; sourceTree = "<group>"; };
 		C40628D21686770D000F982D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		C40628D41686770D000F982D /* ClassList1Tests.h */ = {isa = PBXFileReference; path = ClassList1Tests.h; sourceTree = "<group>"; };
+		C40628D41686770D000F982D /* ClassList1Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassList1Tests.h; sourceTree = "<group>"; };
 		C40628D51686770D000F982D /* ClassList1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassList1Tests.m; sourceTree = "<group>"; };
+		C40628DF16867AE3000F982D /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		C40628E016867AE3000F982D /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 				C40628B61686770D000F982D /* AppDelegate.h */,
 				C40628B71686770D000F982D /* AppDelegate.m */,
 				C40628B91686770D000F982D /* MainStoryboard.storyboard */,
+				C40628DF16867AE3000F982D /* Student.h */,
+				C40628E016867AE3000F982D /* Student.m */,
 				C40628BC1686770D000F982D /* MasterViewController.h */,
 				C40628BD1686770D000F982D /* MasterViewController.m */,
 				C40628BF1686770D000F982D /* DetailViewController.h */,
@@ -266,6 +271,7 @@
 				C40628B81686770D000F982D /* AppDelegate.m in Sources */,
 				C40628BE1686770D000F982D /* MasterViewController.m in Sources */,
 				C40628C11686770D000F982D /* DetailViewController.m in Sources */,
+				C40628E116867AE3000F982D /* Student.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

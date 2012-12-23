@@ -10,8 +10,11 @@
 
 #import "DetailViewController.h"
 
+#import "Student.h"
+
 @interface MasterViewController () {
     NSMutableArray *_objects;
+    int classCounter;
 }
 @end
 
@@ -31,6 +34,8 @@
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
+    
+    classCounter = 0;
 }
 
 - (void)viewDidUnload
@@ -49,7 +54,7 @@
     if (!_objects) {
         _objects = [[NSMutableArray alloc] init];
     }
-    [_objects insertObject:[NSDate date] atIndex:0];
+    [_objects insertObject:[[Student alloc] initWithFirstName:@"First Name" andLastName:@"Last Name" andId:classCounter++] atIndex:0];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
@@ -70,7 +75,7 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
 
-    NSDate *object = [_objects objectAtIndex:indexPath.row];
+    Student *object = [_objects objectAtIndex:indexPath.row];
     cell.textLabel.text = [object description];
     return cell;
 }
@@ -111,7 +116,7 @@
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = [_objects objectAtIndex:indexPath.row];
+        Student *object = [_objects objectAtIndex:indexPath.row];
         [[segue destinationViewController] setDetailItem:object];
     }
 }
