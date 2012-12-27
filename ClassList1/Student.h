@@ -16,11 +16,13 @@
     NSString *description;
 }
 
-@property NSString *firstName;
-@property NSString *lastName;
-@property int studentId;
-@property NSString *description;
-
 - (id)initWithFirstName:(NSString *)studentFirstName andLastName:(NSString *)studentLastName andId:(int)studentNumber;
+- (NSString *)getFirstName;
+- (NSString *)getLastName;
+- (void)setFirstName:(NSString *)firstNameToSet;
+- (void)setLastName:(NSString *)lastNameToSet;
+- (NSString *)getDescription;
+- (void)updateDescription;
+- (int)getId;
 
 @end

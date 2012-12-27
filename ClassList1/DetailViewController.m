@@ -39,10 +39,10 @@
     // Update the user interface for the detail item.
 
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
-        self.studentIdLabel.text = [NSString stringWithFormat:@"%d",[self.detailItem studentId]];
-        self.firstNameOutlet.text = [self.detailItem firstName];
-        self.lastNameOutlet.text = [self.detailItem lastName];
+        self.detailDescriptionLabel.text = [self.detailItem getDescription];
+        self.studentIdLabel.text = [NSString stringWithFormat:@"%d",[self.detailItem getId]];
+        self.firstNameOutlet.text = [self.detailItem getFirstName];
+        self.lastNameOutlet.text = [self.detailItem getLastName];
     }
 }
 
@@ -70,8 +70,12 @@
 
 - (IBAction)updateAction:(id)sender {
     Student *tempStudent = self.detailItem;
-    tempStudent.firstName = self.firstNameOutlet.text;
-    tempStudent.lastName = self.lastNameOutlet.text;
+    //tempStudent.firstName = self.firstNameOutlet.text;
+    [tempStudent setFirstName:self.firstNameOutlet.text];
+    //tempStudent.lastName = self.lastNameOutlet.text;
+    [tempStudent setLastName:self.lastNameOutlet.text];
+    
+    self.detailDescriptionLabel.text = [tempStudent getDescription];
     
 }
 @end

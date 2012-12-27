@@ -76,7 +76,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
 
     Student *object = [_objects objectAtIndex:indexPath.row];
-    cell.textLabel.text = [object description];
+    cell.textLabel.text = [object getDescription];
     return cell;
 }
 
